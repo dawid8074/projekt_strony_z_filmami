@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Zgłoszone komentarze</title>
+    <link rel="stylesheet" href="styleWIdeoSite.css">
+  </head>
+  <body class="body">
+    <div class="searchbar">
+        <div class="logo">
+            <a href="http://localhost:8080/wszystkiewideo.html">
+                <img src="logo.png" alt="logo">
+            </a>
+        </div>
+
+        <div class="wyszukiwanie">
+            <input type="text" id="wyszukiwarkaInput" placeholder="Wyszukaj tutaj">
+            <input type="button" id="przyciskWyszukaj" value="Szukaj">
+        </div>
+        <script src="wyszukiwanie.js"></script>
+        <div class="zaloguj_panel">
+            <div class="zalogowany">
+                <a href="http://localhost:8080/dodaj_wideo.html" class="link">Dodaj film</a>
+                <a href="http://localhost:8080/logout" class="link">Wyloguj</a>
+            </div>
+            <div class="wylogowany">
+                <a href="http://localhost:8080/login" class="link">Zaloguj się</a>
+            </div>
+            <script src="czy_zalogowany_nav.js"></script>
+        </div>
+    </div>
+
+    <div class="main_zgloszone_komentarze">
+        <div class="nav_left">
+            <a href="http://localhost:8080/dodaj_wideo.html" class="link">Dodaj film</a>
+            <a href="http://localhost:8080/zgloszone_kom.html" id="zgloszoneLink" class="link">Zgłoszone komentarze</a>
+        </div>
+        <div class="content_right">
+            <div class="tytul_content">Oczekujące komentarze do akceptacji</div>
+
+
+            <div class="templatka_zgloszony" id="temp">
+                <div class="nazwaIdata">
+                    <p class="nazwa_uzytkownika">Użytkownik</p>
+                    <p class="data_komentarza">10.10.1010</p>
+                </div>
+                <div class="komentarz_tresc">
+                    <p class="tresc_komentarza_tekst">tresc przykładowego komentarza</p> 
+                </div>
+                <div class="opcje_pod_zgloszonym_komentarzem">
+                    <input type="submit" class="przycisk_akceptuj_zgloszony_komentarz" value="Akceptuj" >
+                    <input type="submit" class="przycisk_usun_zgloszony_komentarz" value="Usuń" >
+                </div>
+            </div>
+            
+        </div>
+
+        
+        <script src="zgloszoneKom.js"></script>
+    </div>
+  </body>
+</html>

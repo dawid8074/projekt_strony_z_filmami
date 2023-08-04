@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Odtwarzacz wideo</title>
+    <link rel="stylesheet" href="styleWIdeoSite.css">
+  </head>
+  <body class="body">
+    <div class="searchbar">
+        <div class="logo">
+            <a href="http://localhost:8080/wszystkiewideo.html">
+                <img src="logo.png" alt="logo">
+            </a>
+        </div>
+
+        <div class="wyszukiwanie">
+            <input type="text" id="wyszukiwarkaInput" placeholder="Wyszukaj tutaj">
+            <input type="button" id="przyciskWyszukaj" value="Szukaj">
+        </div>
+        <script src="wyszukiwanie.js"></script>
+        <div class="zaloguj_panel">
+            <div class="zalogowany">
+                <a href="http://localhost:8080/dodaj_wideo.html" class="link">Dodaj film</a>
+                <a href="http://localhost:8080/logout" class="link">Wyloguj</a>
+            </div>
+            <div class="wylogowany">
+                <a href="http://localhost:8080/login" class="link">Zaloguj się</a>
+            </div>
+            <script src="czy_zalogowany_nav.js"></script>
+        </div>
+    </div>
+
+    <div class="wszystkie_filmy">
+        <div class="template_jeden_film" >
+            <a href="http://localhost:8080/wideosite.html">
+                <input type="hidden" class="id"	name="id" value="" >
+                <img src="miniaturka.jpg" class="photo_mini" alt="miniaturka">
+                <div class="proponowane_wideo_szczegoly">
+                    <p class="autor_wszystkie_wideo">Kasia z bolta</p>
+                    <p class="tytul_propozycji">przykładowa nazwa wideo</p>
+                    <p class="data_propozycji">18.01.2022</p> 
+                </div>
+            </a>
+            <script src="wszystkie_wideo.js"></script>
+
+        </div>
+    </div>
+    <div class="paginacja">
+        <a href="http://localhost:8080/wszystkiewideo.html" class="change">1</a>
+        <!-- <a href="http://localhost:8080/wszystkiewideo.html" class="active">2</a> -->
+    </div>
+
+
+
+  </body>
+</html>

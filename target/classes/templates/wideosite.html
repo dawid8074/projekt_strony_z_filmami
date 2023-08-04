@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Odtwarzacz wideo</title>
+    <link rel="stylesheet" href="styleWIdeoSite.css">
+  </head>
+  <body class="body">
+    <div class="searchbar">
+        <div class="logo">
+            <a href="http://localhost:8080/wszystkiewideo.html" class="link">
+                <img src="logo.png" alt="logo">
+            </a>
+        </div>
+
+        <div class="wyszukiwanie">
+            <input type="text" id="wyszukiwarkaInput" placeholder="Wyszukaj tutaj">
+            <input type="button" id="przyciskWyszukaj" value="Szukaj">
+        </div>
+        <script src="wyszukiwanie.js"></script>
+        <div class="zaloguj_panel">
+            <div class="zalogowany">
+                <a href="http://localhost:8080/dodaj_wideo.html" class="link">Dodaj film</a>
+                <a href="http://localhost:8080/logout" class="link">Wyloguj</a>
+            </div>
+            <div class="wylogowany">
+                <a href="http://localhost:8080/login" class="link">Zaloguj się</a>
+            </div>
+            <script src="czy_zalogowany_nav.js"></script>
+        </div>
+    </div>
+
+    <div class="main_wideoSite">
+        <div class="wideoIkomentarze">
+            <div class="wideo_opis">
+                <video id="video" controls>
+                    <source src="test" class="odtwarzacz" type="video/mp4">
+                    <p>Twoja przeglądarka nie obsługuje odtwarzacza wideo.</p>
+                </video>
+                <div class="author_data">
+                    <p class="autor_wideo">Autor</p>
+                    <p class="data_wideo">10.10.1010</p>
+                </div>
+                <p hidden class="id_autora"></p>
+                <p class="nazwa_wideo">Nazwa filmu</p>
+                <a class="link_wideo_edit" href="http://localhost:8080/wideoedit.html?id_wideo=" >Edytuj wideo</a>
+                <p class="tresc_opisu_filmu">Opis filmu</p>
+            </div>
+            
+
+
+            <div class="komentarzeAndNowy">
+                <div class="napisz_komentarz">
+                        <!-- <input type="hidden"	name="option" value="dodaj" > -->
+                        <input type="text" class="nowy_komentarz_tresc">
+                        <input type="submit" class="przycisk_dodaj_komentarz" value="Dodaj komentarz" onclick="dodajKomentarz()">
+                </div>
+                <div class="komentarze">
+                    <div class="templatka_komentarz" id="temp">
+                        <div class="nazwaIdata">
+                            <p class="nazwa_uzytkownika">Użytkownik</p>
+                            <p class="data_komentarza">10.10.1010</p>
+                        </div>
+                        <div class="komentarz_tresc">
+                            <p class="tresc_komentarza_tekst">tresc przykładowego komentarza</p> 
+                        </div>
+                        <div class="edycja_komentarza">
+                            <textarea name="Text1" cols="40" rows="3" class="miejsce_edycji_komentarza"></textarea>
+                            <input type="submit" class="Przycisk_zapisania_edycji_komentarza" value="Zapisz" >
+                        </div>
+                        <p class="komunikat_edycji">Udało się zedytować</p>
+                        <div class="opcje_pod_komentarzem">
+                            <input type="submit" class="przycisk_like" value="like" >
+                            <p class="liczba_like">0</p>
+                            <input type="submit" class="przycisk_dislike" value="dislike" >
+                            <p class="liczba_dislike">0</p>
+                            <input type="submit" class="przycisk_zglos" value="zgłoś">
+                            <p class="zgloszono_komunikat">Zgłoszono</p>
+                            <div class="przyciski">          
+                                <input type="submit" class="Przycisk_edycji_komentarza" value="Edytuj komentarz">
+                                <input type="submit" class="Przycisk_usuniecia_komentarza" value="Usuń komentarz">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="proponowane_wideo">
+            <div class="template_proponowane_jedno_wideo">
+                <a href="http://localhost:8080/wideosite.html?id_wideo=" class="popozycja_link">
+                    <img src="miniaturka.jpg" class="miniaturka2" alt="miniaturka">
+                    <div class="proponowane_wideo_szczegoly_miniatura">
+                        <p class="tytul_propozycji">przykładowa nazwa wideo</p>
+                        <p class="data_propozycji">18.01.2022</p> 
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+        <script src="wideo_to_site.js"></script>
+    </div>
+  </body>
+</html>

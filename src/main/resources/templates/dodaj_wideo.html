@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dodaj wideo</title>
+    <link rel="stylesheet" href="styleWIdeoSite.css">
+  </head>
+  <body class="body">
+    <div class="searchbar">
+        <div class="logo">
+            <a href="http://localhost:8080/wszystkiewideo.html">
+                <img src="logo.png" alt="logo">
+            </a>
+        </div>
+
+        <div class="wyszukiwanie">
+            <input type="text" id="wyszukiwarkaInput" placeholder="Wyszukaj tutaj">
+            <input type="button" id="przyciskWyszukaj" value="Szukaj">
+        </div>
+        <script src="wyszukiwanie.js"></script>
+        <div class="zaloguj_panel">
+            <div class="zalogowany">
+                <a href="http://localhost:8080/dodaj_wideo.html" class="link">Dodaj film</a>
+                <a href="http://localhost:8080/logout" class="link">Wyloguj</a>
+            </div>
+            <div class="wylogowany">
+                <a href="http://localhost:8080/login" class="link">Zaloguj się</a>
+            </div>
+            <script src="czy_zalogowany_nav.js"></script>
+        </div>
+    </div>
+
+    <div class="main_dodaj_wideo">
+        <div class="nav_left">
+            <a href="http://localhost:8080/dodaj_wideo.html" class="link">Dodaj film</a>
+            <a href="http://localhost:8080/zgloszone_kom.html" id="zgloszoneLink" class="link">Zgłoszone komentarze</a>
+        </div>
+        <div class="content_right">
+            <div class="tytul_content">Dodaj wideo</div>
+            <div class="formularz_dodawania_wideo">
+                <p class="test">Plik wideo </p>
+                <input type="file" accept="video/*, .mkv" max="10485760" name="file">
+                <p class="test">Tytuł </p>
+                <input type="text" class="tytul_nowego_wideo" required>
+                <p class="test">Opis </p>
+                <textarea name="Text1" cols="40" rows="3" class="miejsce_edycji_komentarza" required></textarea>
+                
+            </div>
+            <input type="submit" class="przycisk_usun_zgloszony_komentarz" value="Dodaj wideo" onclick="dodaj_wideo()">
+
+            
+            
+        </div>
+
+        <script src="dodajWideo.js"></script>
+    </div>
+  </body>
+</html>

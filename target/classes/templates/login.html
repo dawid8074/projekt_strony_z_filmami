@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="styleLogin.css">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Zaloguj się</title>
+</head>
+    <body>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="logo.png" alt="logo">
+            </div>
+            <form th:action="@{/login}" method="post">
+                <div class="form-field d-flex align-items-center">
+                    <span class="far fa-user"></span>
+                    <input type="text" name="username" placeholder="login"/>
+                </div>
+                <div class="form-field d-flex align-items-center">
+                    <span class="fas fa-key"></span>
+                    <input type="password" name="password" placeholder="hasło"/>
+                </div>
+
+                <div class="error_login" th:if="${param.error}">
+                    Nie poprawny login lub hasło.</div>
+                <div class="pozytywnie_wylogowano" th:if="${param.logout}">
+                    Wylogowano.</div>
+
+                    <button class="btn mt-3">Zaloguj się</button>
+            </form>
+            <div class="text-center fs-6">
+                <!-- <a href="#">Zapomniane hasło?</a> albo  -->
+                <a href="http://localhost:8080/rejestracja.html">Zarejestruj się</a>
+            </div>
+        </div>
+    </body>
+</html>
